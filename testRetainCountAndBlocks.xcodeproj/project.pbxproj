@@ -14,6 +14,7 @@
 		D33939261B17791F003F0164 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D33939251B17791F003F0164 /* Images.xcassets */; };
 		D33939291B17791F003F0164 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D33939271B17791F003F0164 /* LaunchScreen.xib */; };
 		D33939351B17791F003F0164 /* testRetainCountAndBlocksTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D33939341B17791F003F0164 /* testRetainCountAndBlocksTests.m */; };
+		D33939401B177A9D003F0164 /* TestRetainCountAndBlocks.m in Sources */ = {isa = PBXBuildFile; fileRef = D339393F1B177A9D003F0164 /* TestRetainCountAndBlocks.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,8 @@
 		D339392E1B17791F003F0164 /* testRetainCountAndBlocksTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = testRetainCountAndBlocksTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D33939331B17791F003F0164 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D33939341B17791F003F0164 /* testRetainCountAndBlocksTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = testRetainCountAndBlocksTests.m; sourceTree = "<group>"; };
+		D339393E1B177A9D003F0164 /* TestRetainCountAndBlocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestRetainCountAndBlocks.h; sourceTree = "<group>"; };
+		D339393F1B177A9D003F0164 /* TestRetainCountAndBlocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestRetainCountAndBlocks.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +86,8 @@
 			children = (
 				D339391C1B17791E003F0164 /* AppDelegate.h */,
 				D339391D1B17791E003F0164 /* AppDelegate.m */,
+				D339393E1B177A9D003F0164 /* TestRetainCountAndBlocks.h */,
+				D339393F1B177A9D003F0164 /* TestRetainCountAndBlocks.m */,
 				D339391F1B17791E003F0164 /* ViewController.h */,
 				D33939201B17791E003F0164 /* ViewController.m */,
 				D33939221B17791E003F0164 /* Main.storyboard */,
@@ -221,6 +226,7 @@
 			files = (
 				D33939211B17791E003F0164 /* ViewController.m in Sources */,
 				D339391E1B17791E003F0164 /* AppDelegate.m in Sources */,
+				D33939401B177A9D003F0164 /* TestRetainCountAndBlocks.m in Sources */,
 				D339391B1B17791E003F0164 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
