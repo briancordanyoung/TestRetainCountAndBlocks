@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>57EBC843-3995-4154-9208-DD7F5B2F4184</string>
+	<key>IDESourceControlProjectName</key>
+	<string>testRetainCountAndBlocks</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>ABD821D489017CB2CEBC7368ADD6466B28FCAEE0</key>
+		<string>https://github.com/briancordanyoung/TestRetainCountAndBlocks.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>testRetainCountAndBlocks.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>ABD821D489017CB2CEBC7368ADD6466B28FCAEE0</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/briancordanyoung/TestRetainCountAndBlocks.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>ABD821D489017CB2CEBC7368ADD6466B28FCAEE0</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>ABD821D489017CB2CEBC7368ADD6466B28FCAEE0</string>
+			<key>IDESourceControlWCCName</key>
+			<string>TestRetainCountAndBlocks</string>
+		</dict>
+	</array>
+</dict>
+</plist>
