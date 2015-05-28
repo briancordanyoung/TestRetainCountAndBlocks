@@ -13,8 +13,7 @@
 
 + (void)test {
   // Test: Once this method is executed, what will be printed to the console?
-  // Both the printing/execution order and retain count are important
-  
+
   
   NSObject *object = [NSObject new];
 
@@ -56,7 +55,9 @@
 
 
 + (void)testCommented {
-  
+  // Test: Once this method is executed, what will be printed to the console?
+  // Both the printing/execution order and retain count are important
+
   NSObject *object = [NSObject new];  // Retain Count: 1
   
   dispatch_async(dispatch_get_main_queue(), ^{
