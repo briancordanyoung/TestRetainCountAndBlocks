@@ -9,16 +9,16 @@ To understand it better I created this test project and picked it apart until I 
     NSObject *object = [NSObject new];
     
     dispatch_async(dispatch_get_main_queue(), ^{
-      NSLog(@"A %lu", [object retainCount]);
+      NSLog(@"A %u", [object retainCount]);
       
       dispatch_async(dispatch_get_main_queue(), ^{
-        NSLog(@"B %lu", [object retainCount]);
+        NSLog(@"B %u", [object retainCount]);
       });
       
-      NSLog(@"C %lu", [object retainCount]);
+      NSLog(@"C %u", [object retainCount]);
     });
     
-    NSLog(@"D %lu", [object retainCount]);
+    NSLog(@"D %u", [object retainCount]);
 
 ### Your choice of answers
 

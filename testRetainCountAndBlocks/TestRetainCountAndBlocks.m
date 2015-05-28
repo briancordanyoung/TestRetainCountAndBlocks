@@ -16,16 +16,16 @@
   NSObject *object = [NSObject new];
   
   dispatch_async(dispatch_get_main_queue(), ^{
-    NSLog(@"A %lu", [object retainCount]);
+    NSLog(@"A %u", [object retainCount]);
     
     dispatch_async(dispatch_get_main_queue(), ^{
-      NSLog(@"B %lu", [object retainCount]);
+      NSLog(@"B %u", [object retainCount]);
     });
     
-    NSLog(@"C %lu", [object retainCount]);
+    NSLog(@"C %u", [object retainCount]);
   });
   
-  NSLog(@"D %lu", [object retainCount]);
+  NSLog(@"D %u", [object retainCount]);
 }
 
 
@@ -59,30 +59,35 @@
   dispatch_async(dispatch_get_main_queue(), ^{
     
     // Captured inside a block, increacing retain count to 2
-    NSLog(@"A %lu", [object retainCount]); // 2
+    NSLog(@"A %u", [object retainCount]); // 2
     
     dispatch_async(dispatch_get_main_queue(), ^{
       
-      // Captured inside another block, increacing retain count to 3?
-      // but, NO. It is only 2 still
+      // Captured inside another block, increasing retain count to 3?
+      // but, NO! It is only 2 still
       // Is this because the blocks are async?
       // The first block has already completed by the time this
       // block executes on the next loop?
-      NSLog(@"B %lu", [object retainCount]); // 2
+      //
+      // The answer is that the enclosing block executes,
+      // the current block captures 'object' (retain count now 3)
+      // places this block on the queue, then completes, popping off the stack &
+      // decrementing the retain count back to 2.
+      NSLog(@"B %u", [object retainCount]); // 2
       
     });
     
     // The 2nd block have been dispatched, but not yet executed
-    // original-retain-count + block-capture + block-capture = 3
-    NSLog(@"C %lu", [object retainCount]); // 3
+    // initial-retain-count + block-capture + block-capture = 3
+    NSLog(@"C %u", [object retainCount]); // 3
     
   });
   
   // The 1st block has captured 'object', increasing retain count
   // The 2nd block has not yet captured 'object' because the 1st block has not
   // executed yet.
-  // original-retain-count + block-capture = 2
-  NSLog(@"D %lu", [object retainCount]); // 2
+  // initial-retain-count + block-capture = 2
+  NSLog(@"D %u", [object retainCount]); // 2
 }
 
 
